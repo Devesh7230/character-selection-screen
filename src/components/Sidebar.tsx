@@ -59,7 +59,7 @@ export default function Sidebar({ activeTab, onSelectTab, character }: SidebarPr
   const style = elementStyles[character.element] || elementStyles.Cryo;
 
   return (
-    <div id="sidebar-tabs" className="w-full md:w-64 flex flex-row md:flex-col items-center md:items-start space-x-1 space-y-0 md:space-x-0 md:space-y-4 px-4 py-2 md:py-6 border-b md:border-b-0 md:border-r border-white/10 bg-white/5 md:bg-transparent">
+    <div id="sidebar-tabs" className="w-full md:w-64 flex flex-row md:flex-col items-center md:items-start space-x-1 space-y-0 md:space-x-0 md:space-y-4 px-2 sm:px-4 py-2 md:py-6 border-b md:border-b-0 md:border-r border-white/10 bg-white/5 md:bg-transparent">
       {/* Optional decorative tribe icon / header on desktop */}
       <div className="hidden md:block px-4 pb-4 border-b border-white/10 w-full mb-2">
         <h2 className="text-xs font-mono tracking-widest text-slate-400 uppercase">SYSTEM DIAGNOSTICS</h2>
@@ -69,7 +69,7 @@ export default function Sidebar({ activeTab, onSelectTab, character }: SidebarPr
         </div>
       </div>
 
-      <nav className="flex flex-row md:flex-col w-full overflow-x-auto md:overflow-visible no-scrollbar space-x-2 md:space-x-0 md:space-y-2">
+      <nav className="flex flex-row md:flex-col w-full overflow-x-auto md:overflow-visible no-scrollbar gap-2 md:gap-0 md:space-y-2">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id;
 
@@ -79,7 +79,7 @@ export default function Sidebar({ activeTab, onSelectTab, character }: SidebarPr
               id={`sidebar-tab-${tab.id.toLowerCase()}`}
               onClick={() => onSelectTab(tab.id)}
               className={`
-                flex items-center space-x-4 py-3 px-6 rounded-r-full w-full text-left font-sans transition-all duration-200 cursor-pointer whitespace-nowrap
+                flex flex-none md:flex-auto items-center space-x-3 md:space-x-4 py-3 px-4 md:px-6 rounded-r-full w-auto md:w-full text-left font-sans transition-all duration-200 cursor-pointer whitespace-nowrap
                 ${isActive 
                   ? `bg-gradient-to-r ${style.gradient} border-l-4 ${style.text}`
                   : "text-slate-400 hover:text-white border-l-4 border-transparent opacity-60 hover:opacity-100"

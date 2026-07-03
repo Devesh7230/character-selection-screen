@@ -8,14 +8,12 @@ import WeaponsTab from "./components/WeaponsTab";
 import ConstellationTab from "./components/ConstellationTab";
 import TalentsTab from "./components/TalentsTab";
 import ProfileTab from "./components/ProfileTab";
-import { Keyboard, HelpCircle } from "lucide-react";
 
 export default function App() {
   // Manage state of our character database so locks can be toggled interactively
   const [characters, setCharacters] = useState<Character[]>(characterData);
   const [activeCharacterId, setActiveCharacterId] = useState<string>(characterData[0]?.id || "");
   const [activeTab, setActiveTab] = useState<string>("Attributes");
-  const [showControlsHint, setShowControlsHint] = useState<boolean>(true);
 
   // Get active character reference
   const activeCharacter = characters.find((c) => c.id === activeCharacterId) || characters[0];
@@ -155,7 +153,7 @@ export default function App() {
         />
 
         {/* 2. CORE LAYOUT SPLIT: Left Sidebar + Centered Content Stage */}
-        <div className="flex-1 flex flex-col md:flex-row items-stretch w-full max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-8 space-y-6 md:space-y-0">
+        <div className="flex-1 flex flex-col md:flex-row items-stretch w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-3 md:py-8 space-y-4 md:space-y-0">
           
           {/* LEFT SIDEBAR (ATTRIBUTES, WEAPONS, CONSTELLATION, TALENTS, PROFILE) */}
           <Sidebar
@@ -165,13 +163,13 @@ export default function App() {
           />
 
           {/* MAIN TAB CONTENT VIEW STAGE */}
-          <section className="flex-1 min-h-[500px] flex items-center justify-center pl-0 md:pl-8">
+          <section className="flex-1 min-h-0 md:min-h-[500px] flex items-center justify-center pl-0 md:pl-8">
             {renderTabContent()}
           </section>
         </div>
 
         {/* 3. CONSOLE FOOTER CONTROLS HUD */}
-        <footer id="hud-footer" className="w-full px-6 py-3 border-t border-white/10 bg-white/5 backdrop-blur-xl flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono space-y-2 sm:space-y-0">
+        <footer id="hud-footer" className="hidden md:flex w-full px-6 py-3 border-t border-white/10 bg-white/5 backdrop-blur-xl flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono space-y-2 sm:space-y-0">
           
           {/* Control Guide Buttons */}
           <div className="flex items-center space-x-6">
@@ -189,15 +187,9 @@ export default function App() {
 
           {/* Optional control layout disclaimer */}
           <div className="flex items-center space-x-4">
-            {showControlsHint && (
-              <span className="hidden sm:inline-block text-[10px] bg-cyan-950/40 text-cyan-300 border border-cyan-500/20 px-2 py-0.5 rounded">
-                Pro Keyboard bindings active
-              </span>
-            )}
-            <div className="flex items-center space-x-1">
-              <span>DESIGN STATUS:</span>
-              <span className="text-white font-bold tracking-wider uppercase">ACTIVE PROTOCOL</span>
-            </div>
+            <span className="hidden sm:inline-block text-[10px] bg-cyan-950/40 text-cyan-300 border border-cyan-500/20 px-2 py-0.5 rounded">
+              Pro Keyboard bindings active
+            </span>
           </div>
 
         </footer>

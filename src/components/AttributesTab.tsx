@@ -31,10 +31,10 @@ export default function AttributesTab({ character }: AttributesTabProps) {
   const currentTheme = elementColors[character.element] || elementColors.Cryo;
 
   return (
-    <div id="tab-attributes-view" className="flex flex-col lg:flex-row items-center justify-between w-full h-full space-y-6 lg:space-y-0 lg:space-x-8 px-4 py-2">
+    <div id="tab-attributes-view" className="flex flex-col lg:flex-row items-center justify-between w-full h-full space-y-5 lg:space-y-0 lg:space-x-8 px-2 sm:px-4 py-1 md:py-2">
       
       {/* LEFT / CENTER: Full Character 2D Image with ambient background glowing effect */}
-      <div className="flex-1 flex items-center justify-center relative min-h-[400px] lg:min-h-[500px] w-full">
+      <div className="flex-1 flex items-center justify-center relative min-h-[320px] sm:min-h-[400px] lg:min-h-[500px] w-full">
         {/* Holographic grid and circular runes backdrop */}
         <div className="absolute w-[300px] h-[300px] md:w-[420px] md:h-[420px] rounded-full border border-white/5 bg-radial from-white/[0.03] to-transparent animate-[spin_40s_infinite_linear] pointer-events-none" />
         <div className="absolute w-[240px] h-[240px] md:w-[350px] md:h-[350px] rounded-full border border-dashed border-white/10 pointer-events-none animate-[spin_60s_infinite_reverse]" />
@@ -45,12 +45,12 @@ export default function AttributesTab({ character }: AttributesTabProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative max-w-sm md:max-w-md lg:max-w-lg z-10 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]"
+          className="relative w-full max-w-[22rem] md:max-w-md lg:max-w-lg z-10 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]"
         >
           <img
             src={character.images.mainRender}
             alt={character.name}
-            className={`object-contain max-h-[420px] md:max-h-[520px] rounded-3xl mx-auto border border-white/10 ${currentTheme.glow}`}
+            className={`object-contain w-full max-h-[420px] md:max-h-[520px] rounded-3xl mx-auto border border-white/10 ${currentTheme.glow}`}
             referrerPolicy="no-referrer"
           />
         </motion.div>
@@ -60,20 +60,20 @@ export default function AttributesTab({ character }: AttributesTabProps) {
       <div className="w-full lg:w-[420px] flex flex-col space-y-4">
         
         {/* Character Title Card */}
-        <HolographicPanel element={character.element} className="p-5 flex flex-col space-y-3">
-          <div className="flex justify-between items-start">
-            <div>
+        <HolographicPanel element={character.element} className="p-4 sm:p-5 flex flex-col space-y-3">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+            <div className="min-w-0">
               <div className="flex items-center space-x-2">
                 <span className={`text-xs px-2.5 py-0.5 rounded-full font-mono font-bold tracking-widest ${currentTheme.bg} ${currentTheme.text}`}>
                   {character.element}
                 </span>
                 <span className="text-xs text-slate-400 font-mono">Level {character.level}</span>
               </div>
-              <h1 className="text-3xl font-sans font-black tracking-wide text-white mt-1.5">{character.name}</h1>
+              <h1 className="text-3xl sm:text-3xl font-sans font-black tracking-wide text-white mt-1.5 break-words">{character.name}</h1>
             </div>
 
             {/* Five Star indicator */}
-            <div className="flex items-center space-x-0.5 bg-yellow-500/10 border border-yellow-500/20 rounded-md px-2 py-1">
+            <div className="flex items-center space-x-0.5 bg-yellow-500/10 border border-yellow-500/20 rounded-md px-2 py-1 self-start sm:self-auto">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
               ))}
@@ -86,7 +86,7 @@ export default function AttributesTab({ character }: AttributesTabProps) {
         </HolographicPanel>
 
         {/* Detailed Stats Panel */}
-        <HolographicPanel element={character.element} className="p-5 flex flex-col space-y-4">
+        <HolographicPanel element={character.element} className="p-4 sm:p-5 flex flex-col space-y-4">
           <h3 className="text-xs font-semibold font-mono tracking-widest text-slate-400 uppercase flex items-center space-x-2">
             <span className="w-1.5 h-1.5 bg-current rotate-45" />
             <span>BASE PROPERTIES</span>
@@ -135,7 +135,7 @@ export default function AttributesTab({ character }: AttributesTabProps) {
         </HolographicPanel>
 
         {/* Friendship Level Card */}
-        <HolographicPanel element={character.element} className="p-4 flex items-center justify-between">
+        <HolographicPanel element={character.element} className="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
               <Heart className="w-4.5 h-4.5 text-rose-400 animate-pulse" />
@@ -147,7 +147,7 @@ export default function AttributesTab({ character }: AttributesTabProps) {
           </div>
 
           {/* Mini progress line */}
-          <div className="w-1/3 h-1.5 bg-white/5 rounded-full overflow-hidden border border-white/10">
+          <div className="w-full sm:w-1/3 h-1.5 bg-white/5 rounded-full overflow-hidden border border-white/10">
             <div 
               className="h-full bg-rose-500" 
               style={{ width: `${(character.friendshipLevel / 10) * 100}%` }}

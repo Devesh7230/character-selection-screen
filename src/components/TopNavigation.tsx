@@ -40,29 +40,29 @@ export default function TopNavigation({
   };
 
   return (
-    <div id="top-navigation" className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 w-full px-4 md:px-6 py-4 border-b border-white/10 bg-white/5 backdrop-blur-xl">
+    <div id="top-navigation" className="flex flex-col md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-stretch md:items-center gap-3 w-full px-3 md:px-6 py-3 md:py-4 border-b border-white/10 bg-white/5 backdrop-blur-xl">
       {/* Active character element status banner */}
-      <div className="flex items-center min-w-0">
-        <span className={`px-3 py-1 rounded-full text-xs font-mono font-semibold tracking-wider uppercase flex items-center space-x-1.5 ${elementColors[activeCharacter.element]?.bg || "bg-white/10 text-white"}`}>
+      <div className="flex items-center min-w-0 md:min-w-0">
+        <span className={`max-w-full px-3 py-1 rounded-full text-[11px] md:text-xs font-mono font-semibold tracking-wider uppercase flex items-center space-x-1.5 ${elementColors[activeCharacter.element]?.bg || "bg-white/10 text-white"}`}>
           <span>{elementColors[activeCharacter.element]?.icon}</span>
           <span className="truncate">{activeCharacter.element} / {activeCharacter.name}</span>
         </span>
       </div>
 
       {/* Center Carousel of Character Thumbnails */}
-      <div className="flex items-center min-w-0 space-x-2 md:space-x-4">
+      <div className="flex items-center min-w-0 w-full md:w-auto">
         {/* L1 Bumper Indicator (fully clickable) */}
         <button
           id="l1-bumper"
           onClick={handlePrev}
-          className="text-xs font-bold text-cyan-400 px-2.5 py-1 border border-cyan-400/30 bg-cyan-400/10 rounded tracking-widest uppercase cursor-pointer active:scale-95 transition-all"
+          className="hidden md:block text-xs font-bold text-cyan-400 px-2.5 py-1 border border-cyan-400/30 bg-cyan-400/10 rounded tracking-widest uppercase cursor-pointer active:scale-95 transition-all"
           title="Previous Character (or Press Q)"
         >
           L1
         </button>
 
         {/* Character Thumbs List */}
-        <div className="flex items-center gap-2 md:gap-3 max-w-[46vw] md:max-w-[54vw] xl:max-w-[680px] overflow-x-auto no-scrollbar px-2 py-2 scroll-smooth">
+        <div className="flex items-center gap-3 w-full md:w-auto md:max-w-[54vw] xl:max-w-[680px] overflow-x-auto no-scrollbar px-1 md:px-2 py-2 scroll-smooth">
           {characters.map((char) => {
             const isActive = char.id === activeCharacter.id;
             const elementInfo = elementColors[char.element];
@@ -110,7 +110,7 @@ export default function TopNavigation({
         <button
           id="r1-bumper"
           onClick={handleNext}
-          className="text-xs font-bold text-cyan-400 px-2.5 py-1 border border-cyan-400/30 bg-cyan-400/10 rounded tracking-widest uppercase cursor-pointer active:scale-95 transition-all"
+          className="hidden md:block text-xs font-bold text-cyan-400 px-2.5 py-1 border border-cyan-400/30 bg-cyan-400/10 rounded tracking-widest uppercase cursor-pointer active:scale-95 transition-all"
           title="Next Character (or Press E)"
         >
           R1
