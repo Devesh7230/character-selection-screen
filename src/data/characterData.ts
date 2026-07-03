@@ -1,4 +1,32 @@
 import { Character } from "../types";
+import AmmaCharacter from "../assets/images/Amma_Character.png";
+import AmmaWeapon from "../assets/images/Amma_Weapon.jpg";
+import DeveshCharacter from "../assets/images/Devesh_Character.png";
+import DeveshWeapon from "../assets/images/Devesh_Weapon.jpg";
+import GeetaCharacter from "../assets/images/Geeta_Character.png";
+import GeetaWeapon from "../assets/images/Geeta_Weapon.avif";
+import JugalCharacter from "../assets/images/Jugal_Character.png";
+import JugalWeapon from "../assets/images/Jugal_Weapon.jpg";
+import KomalCharacter from "../assets/images/Komal_Character.png";
+import KomalWeapon from "../assets/images/Komal_Weapon.jpg";
+import KrishanCharacter from "../assets/images/Krishan_Character.png";
+import KrishanWeapon from "../assets/images/Krishan_Weapon.jpg";
+import KunikaCharacter from "../assets/images/Kunika_Character.png";
+import KunikaWeapon from "../assets/images/Kunika_Weapon.jpg";
+import MaheshCharacter from "../assets/images/Mahesh_Character.png";
+import MaheshWeapon from "../assets/images/Mahesh_Weapon.avif";
+import ManjulaCharacter from "../assets/images/Manjula_Character.png";
+import ManjulaWeapon from "../assets/images/Manjula_Weapon.jpg";
+import PawanCharacter from "../assets/images/Pawan_Character.png";
+import PawanWeapon from "../assets/images/Pawan_Weapon.avif";
+import ShalineeCharacter from "../assets/images/Shalinee_Character.png";
+import ShalineeWeapon from "../assets/images/Shalinee_Weapon.jpg";
+import ShantiCharacter from "../assets/images/Shanti_Character.png";
+import ShantiWeapon from "../assets/images/Shanti_Weapon.jpg";
+import VinodCharacter from "../assets/images/Vinod_Character.png";
+import VinodWeapon from "../assets/images/Vinod_Weapon.jpg";
+import VinitCharacter from "../assets/images/Vinit_Character.png";
+import VinitWeapon from "../assets/images/Vinit_Weapon.jpg";
 
 export const characterData: Character[] = [
   {
@@ -16,9 +44,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "/src/assets/images/Devesh_Character.png",
-      mainRender: "/src/assets/images/Devesh_Character.png",
-      weaponRender: "/src/assets/images/Devesh_Weapon.jpg",
+      profileThumb: DeveshCharacter,
+      mainRender: DeveshCharacter,
+      weaponRender: DeveshWeapon,
     },
     weapon: {
       name: "Volleyball",
@@ -128,9 +156,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Komal_Character.png",
-      mainRender: "src/assets/images/Komal_Character.png",
-      weaponRender: "src/assets/images/Komal_Weapon.jpg",
+      profileThumb: KomalCharacter,
+      mainRender: KomalCharacter,
+      weaponRender: KomalWeapon,
     },
     weapon: {
       name: "5 Min Rule",
@@ -240,9 +268,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Kunika_Character.png",
-      mainRender: "src/assets/images/Kunika_Character.png",
-      weaponRender: "src/assets/images/Kunika_Weapon.jpg",
+      profileThumb: KunikaCharacter,
+      mainRender: KunikaCharacter,
+      weaponRender: KunikaWeapon,
     },
     weapon: {
       name: "Dog Princess",
@@ -352,9 +380,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Geeta_Character.png",
-      mainRender: "src/assets/images/Geeta_Character.png",
-      weaponRender: "src/assets/images/Geeta_Weapon.avif",
+      profileThumb: GeetaCharacter,
+      mainRender: GeetaCharacter,
+      weaponRender: GeetaWeapon,
     },
     weapon: {
       name: "The Belt",
@@ -464,9 +492,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Mahesh_Character.png",
-      mainRender: "src/assets/images/Mahesh_Character.png",
-      weaponRender: "src/assets/images/Mahesh_Weapon.avif",
+      profileThumb: MaheshCharacter,
+      mainRender: MaheshCharacter,
+      weaponRender: MaheshWeapon,
     },
     weapon: {
       name: "The Morning Edition",
@@ -576,9 +604,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Krishan_Character.png",
-      mainRender: "src/assets/images/Krishan_Character.png",
-      weaponRender: "src/assets/images/Krishan_Weapon.jpg",
+      profileThumb: KrishanCharacter,
+      mainRender: KrishanCharacter,
+      weaponRender: KrishanWeapon,
     },
     weapon: {
       name: "Divine Devotion",
@@ -688,9 +716,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Shanti_Character.png",
-      mainRender: "src/assets/images/Shanti_Character.png",
-      weaponRender: "src/assets/images/Shanti_Weapon.jpg",
+      profileThumb: ShantiCharacter,
+      mainRender: ShantiCharacter,
+      weaponRender: ShantiWeapon,
     },
     weapon: {
       name: "The Sovereign Keychain",
@@ -800,9 +828,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Vinit_Character.png",
-      mainRender: "src/assets/images/Vinit_Character.png",
-      weaponRender: "src/assets/images/Vinit_Weapon.jpg",
+      profileThumb: VinitCharacter,
+      mainRender: VinitCharacter,
+      weaponRender: VinitWeapon,
     },
     weapon: {
       name: "The Couch Potato's Edge",
@@ -912,9 +940,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Amma_Character.png",
-      mainRender: "src/assets/images/Amma_Character.png",
-      weaponRender: "src/assets/images/Amma_Weapon.jpg",
+      profileThumb: AmmaCharacter,
+      mainRender: AmmaCharacter,
+      weaponRender: AmmaWeapon,
     },
     weapon: {
       name: "Sacred Aarti Book",
@@ -1024,9 +1052,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Manjula_Character.png",
-      mainRender: "src/assets/images/Manjula_Character.png",
-      weaponRender: "src/assets/images/Manjula_Weapon.jpg",
+      profileThumb: ManjulaCharacter,
+      mainRender: ManjulaCharacter,
+      weaponRender: ManjulaWeapon,
     },
     weapon: {
       name: "The Wanderer's Heavy Trunk",
@@ -1136,9 +1164,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Shalinee_Character.png",
-      mainRender: "src/assets/images/Shalinee_Character.png",
-      weaponRender: "src/assets/images/Shalinee_Weapon.jpg",
+      profileThumb: ShalineeCharacter,
+      mainRender: ShalineeCharacter,
+      weaponRender: ShalineeWeapon,
     },
     weapon: {
       name: "The Ballen",
@@ -1248,9 +1276,9 @@ export const characterData: Character[] = [
       maxStamina: 240,
     },
     images: {
-      profileThumb: "src/assets/images/Pawan_Character.png",
-      mainRender: "src/assets/images/Pawan_Character.png",
-      weaponRender: "src/assets/images/Pawan_Weapon.jpg",
+      profileThumb: PawanCharacter,
+      mainRender: PawanCharacter,
+      weaponRender: PawanWeapon,
     },
     weapon: {
       name: "One Glass of Bear",
@@ -1360,9 +1388,9 @@ export const characterData: Character[] = [
     maxStamina: 120, // Spent his golden years peacefully anchored to his favorite chair
   },
   images: {
-    profileThumb: "src/assets/images/Vinod_Character.png",
-    mainRender: "src/assets/images/Vinod_Character.png",
-    weaponRender: "src/assets/images/Vinod_Weapon.jpg",
+    profileThumb: VinodCharacter,
+    mainRender: VinodCharacter,
+    weaponRender: VinodWeapon,
   },
   weapon: {
     name: "The Canvas of Stillness",
@@ -1453,8 +1481,120 @@ export const characterData: Character[] = [
   profile: {
     storyText: "With roots connecting his family to Meerut, Nana Ji was a man of profound stillness. He expressed his beautiful inner world through his incredible sketches and his deep, gentle love for his grandchildren—whether it was filling the kitchen with good food, enjoying his uniquely sweet poha, or sharing his favorite mangoes. He lived as a quiet protector who chose to listen rather than fight, and to endure rather than complain. Though the silent weight he carried ultimately called him back to the heavens, he remains fondly remembered sitting peacefully on his chair, watching over his family with a heart full of silent, infinite love.",
     voiceActor: "Vinod Gupta (Nana Ji)",
-    birthday: "25 December",
+    birthday: "25 December ??",
     region: "Meerut / Uttarakhand",
+  },
+},
+{
+  id: "The Veteran Principal / Baba",
+  name: "Jugal Kishore Gupta",
+  element: "Geo",
+  level: "90/90", // Reflects his 86-87 years of sheer survival
+  friendshipLevel: 9, // High with Komal, lower with the rest of the party
+  description: "A retired school principal holding an elite 80k monthly government pension buff. Known for extreme mood swings, a stone-solid ego, and random kitchen kalesh, he rules his room like an ancient fortress—fearing no one except his youngest granddaughter's endless teasing.",
+  stats: {
+    maxHp: 25000,
+    atk: 1950,
+    def: 1500, // High structural pride defense
+    elementalMastery: 80,
+    maxStamina: 100, // No longer goes on morning walks since Amma's fall
+  },
+  images: {
+    profileThumb: JugalCharacter,
+    mainRender: JugalCharacter,
+    weaponRender: JugalWeapon,
+  },
+  weapon: {
+    name: "The Disciplinarian's Cane",
+    type: "Polearm",
+    rarity: 5,
+    baseAtk: 650,
+    subStat: "DEF%",
+    subStatValue: "60.2%",
+    refinement: 4,
+    description: "An old-school instrument of absolute authority carried by veteran educators. It multiplies the wielder's rigid attitude and financial pride by 200%, making it physically impossible for him to ever say sorry.",
+  },
+  constellations: [
+    { 
+      id: 1, 
+      name: "The 80k Pension Shield", 
+      description: "Generates an impenetrable economic barrier funded by the government. This financial stability fuels a permanent +50% increase to his natural arrogance and strict attitude.", 
+      isLocked: false 
+    },
+    { 
+      id: 2, 
+      name: "Eight-Year Silent Zone", 
+      description: "Can deploy a massive communication blackout field between fathers and sons. Historically locked Papa and Tauji out of voice-chat protocols for 8 consecutive years until Komal dismantled it.", 
+      isLocked: false 
+    },
+    { 
+      id: 3, 
+      name: "The Missing Brass Plate", 
+      description: "Triggers a random early-morning crisis. Accuses Tauji of grand larceny over a misplaced brass plate (Peetal ki Thali). Deploys heavy domestic chaos for 10 minutes until the plate automatically spawns in his own kitchen.", 
+      isLocked: false 
+    },
+    { 
+      id: 4, 
+      name: "The Room Matriarchy", 
+      description: "When Tauji and Taiji leave for the shop, Baba enters a solo isolation mode inside his and Amma's room—surviving exclusively on a strict daily loop of TV, meals, and hot milk.", 
+      isLocked: false 
+    },
+    { 
+      id: 5, 
+      name: "Seniority Amnesia", 
+      description: "Increases the probability of forgetting short-term data by 80%. However, any attempt by family members to explain that 'you can't take this wealth to the heavens' is automatically blocked by his ego stats.", 
+      isLocked: true 
+    },
+    { 
+      id: 6, 
+      name: "The Eldest Survivor's Mantle", 
+      description: "As the oldest brother who outlived his entire generation, he carries the ultimate ancestral weight. Grants him unmatched health reserves, ensuring his presence remains solid for all future wedding events.", 
+      isLocked: true 
+    },
+  ],
+  talents: [
+    { 
+      id: 1, 
+      name: "Normal Attack: Chal Hat Ja!", 
+      description: "Executes a rapid vocal sweep, shouting 'Chal Hat Ja!' or 'Chal Pare Ku!' to force all surrounding party members to immediately step aside and yield the hallway.", 
+      isLocked: false 
+    },
+    { 
+      id: 2, 
+      name: "Elemental Skill: Relative Hospitality Check", 
+      description: "When Komal enters the domain, he instantly declares in front of distant relatives: 'Tu vapas aagyi pareshan krne?'. If Komal counters with a witty reply, Baba enters a rare, un-debuffable 'Blushing/Shy' state.", 
+      isLocked: false 
+    },
+    { 
+      id: 3, 
+      name: "Elemental Burst: Grand Principal Outburst", 
+      description: "Channels decades of school administration energy to shout loudly at the children. Inflicts an immediate 'Fear' status effect on Bhuas, Papas, and Taujis, causing them to avoid eye contact.", 
+      isLocked: true 
+    },
+    { 
+      id: 4, 
+      name: "The Youngest Grandchild Immunity", 
+      description: "A unique passive system law: Komal is completely immune to Baba's fear aura. Being the youngest and his absolute doted favorite, she can actively tease, argue, and provoke him without taking any retaliatory DMG.", 
+      isLocked: false 
+    },
+    { 
+      id: 5, 
+      name: "Time's Softening Matrix", 
+      description: "As the years pass and his age hits the late 80s, his rigid armor slowly erodes. He transitions from a terrifying monarch into a slightly more down-to-earth, open-minded elder.", 
+      isLocked: false 
+    },
+    { 
+      id: 6, 
+      name: "Unbreakable Longevity", 
+      description: "A permanent, passive blessing fueled by his granddaughter's ultimate wish. Grants Baba high-tier immunity to critical illnesses, preserving his healthy form all the way until Komal's future wedding ceremony.", 
+      isLocked: false 
+    },
+  ],
+  profile: {
+    storyText: "An iron-willed patriarch and a retired school principal of Churu, Jugal Kishore Gupta is a legendary figure of old-school pride, stubbornness, and deep-rooted family history. He spent decades ruling with a loud voice, maintaining an 8-year silence with his sons, and guarding his wealth and brass plates with intense vigilance. Yet, time and the relentless affection of his youngest granddaughter have chipped away at his stone exterior. Though he still grumbles and tells everyone to get out of his way, he secretly treasures the noise, the teasing, and the lively kalesh, standing as a proud, vintage, and fiercely healthy monument of the family tree.",
+    voiceActor: "Jugal Kishore Gupta (Baba)",
+    birthday: "?? ?? ????",
+    region: "Churu / Sardarshahar",
   },
 },
 ];
