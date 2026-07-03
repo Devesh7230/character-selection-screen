@@ -1,0 +1,6 @@
+{
+  "name": "Character Selection Screen",
+  "description": "A high-fidelity, interactive Character Selection Screen inspired by Genshin Impact, featuring dynamic elements, modular panels, custom interactive constellations, and a stunning CSS holographic style.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
